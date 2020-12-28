@@ -52,26 +52,23 @@ foreach($array as $key => $item){
 $tong = $max1 + $max2;
 var_dump($tong);
 
-//Bài 3
-// $array3 = [1, 5, 4, 7, 9, 0, -10, 13, 93, 14, 15];
-// $arr1 = [];
-//     foreach($array3 as $value){
-//         foreach($array3 as $value2){
-//             $arr2 = [];
-//             $hieu = $value - $value2;
-//             var_dump($hieu);
-//             if($hieu = 1 || $hieu = -1){
-//                 array_push($arr2, $value);
-//                 array_push($arr2, $value2);
-//                $check = array_search($value2, $arr2);
-//                var_dump($check);
-//                if($check !== false){
-//                    array_push($arr1, [$value, $value2]);
-                   
-//                }
-//             };
-            
-//         }
-//     }
-// var_dump($arr1);
+// Bài 3
+$array3 = [1, 5, 4, 7, 9, 0, -10, 13, 93, 14, 15];
+$arr1 = [];
+    foreach($array3 as $value){
+        foreach($array3 as $value2){
+            $hieu = $value - $value2;
+            if($hieu == 1){
+                $arr2 = [];
+                array_push($arr2, $value);
+                array_push($arr2, $value2);
+                $check = array_search($value2, $arr2);
+                //dd($check);
+                if($check !== false){
+                array_push($arr1, [$value, $value2]);
+                }
+            }
+        }
+    }
+var_dump($arr1);
 
